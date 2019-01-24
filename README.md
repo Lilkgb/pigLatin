@@ -7,8 +7,33 @@
 ## Description
 
 _Enter a year and the program will tell you if it is a leap year or not_
+_Ignores anything that is not a alphabetical character_
 * _input example: 1,2,3_
 * _output example: false_
+
+_Adds 'ay' to single letter words that start with Vowels_
+* _input example: i_
+* _output example: iay_
+
+_Words more than 1 letters and starts with a vowel adds 'way' to the end_
+* _input example: ice_
+* _output example: iceway_
+
+_If word starts with one or more consecutive consonants, move to the end and add 'ay'_
+* _input example: bear_
+* _output example: earbay_
+* _input example: scrub_
+# _output example: ubscray_
+
+_If word begins with 'y' then treat 'y' as a consonants._
+* _input example: your_
+* _output example: ouryay_
+
+_If first consonants include 'qu' then move 'qu' to the end._
+* _input example: queen_
+* _output example: eenquay._
+* _input example: squeal_
+* _output example: ealsquay_
 
 ## Setup/Installation Requirements
 
