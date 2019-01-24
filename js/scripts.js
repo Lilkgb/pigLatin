@@ -11,9 +11,12 @@ function split(leap) {
     if (firstPosition > 0) {
       result += (string.slice(firstPosition) + string.slice(0, firstPosition) + "ay ");
       }
-    else if (firstPosition === 0) {
+    else if ((firstPosition === 0) && (string.length > 1)) {
       result += string + "yay ";
-    }
+        }
+      else {
+        result += string + "ay ";
+      }
   });
   return result;
 }
