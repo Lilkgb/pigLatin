@@ -11,7 +11,7 @@ function split(leap) {
     if (firstPosition > 0) {
       result += (string.slice(firstPosition) + string.slice(0, firstPosition) + "ay ");
       }
-    else {
+    else if (firstPosition === 0) {
       result += string + "yay ";
     }
   });
