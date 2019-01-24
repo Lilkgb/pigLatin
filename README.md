@@ -23,7 +23,7 @@ _If word starts with one or more consecutive consonants, move to the end and add
 * _input example: bear_
 * _output example: earbay_
 * _input example: scrub_
-# _output example: ubscray_
+* _output example: ubscray_
 
 _If word begins with 'y' then treat 'y' as a consonants._
 * _input example: your_
@@ -31,7 +31,7 @@ _If word begins with 'y' then treat 'y' as a consonants._
 
 _If first consonants include 'qu' then move 'qu' to the end._
 * _input example: queen_
-* _output example: eenquay._
+* _output example: eenquay_
 * _input example: squeal_
 * _output example: ealsquay_
 

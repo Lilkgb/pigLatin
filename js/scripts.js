@@ -1,20 +1,33 @@
+function split(leap) {
+  var result = [];
+  var splitString = leap.split(" ");
+  splitString.forEach(function(string){
+    var vowel = string.match(/[aeiou]/);
+    var firstPosition = string.indexOf(vowel);
+    console.log(splitString);
+    console.log(vowel);
+    console.log(firstPosition);
+    console.log(string);
+    if (firstPosition > 0) {
+      result += (string.slice(firstPosition) + string.slice(0, firstPosition) + "ay ");
+      }
+    else {
+      result += string + "yay ";
+    }
+  });
+  return result;
+}
 
-var pigLatin = function(leap) {
-  if (leap === "a" || "e" || "i" || "o" || "u") {
-    $("leap").append("ay");
-    return true;
-  }
-  else if (leap !== (/[a-z]/)) {
-    return false;
-  }
-};
+
+
 
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
     event.preventDefault();
-    var input = $("#leap").val();
-    var result =  pigLatin(input);
+    var leap = $("input#leap").val();
+    var result =  split(leap);
+    // console.log(leap);
+    $("#result").show();
     $(".result").text(result);
-    console.log(result);
   });
 });
